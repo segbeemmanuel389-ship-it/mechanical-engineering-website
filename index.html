@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="ForgeWorks Engineering delivers precision mechanical design, manufacturing support, prototyping, and industrial automation solutions."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#08131c" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ForgeWorks Engineering | Mechanical Design & Industrial Solutions" />
+    <meta
+      property="og:description"
+      content="Precision mechanical design, engineering analysis, prototyping, and manufacturing support."
+    />
+    <title>Mechanical Engineering &amp; Design | ForgeWorks Engineering</title>
+    <style>
+      :root {
+        --bg: #08131c;
+        --bg-soft: #0f1f2d;
+        --panel: #102534;
+        --panel-strong: #0c1d2b;
+        --card: rgba(17, 30, 42, 0.82);
+        --line: rgba(165, 192, 212, 0.18);
+        --text: #edf4f9;
+        --muted: #a2b7c5;
+        --primary: #f4a259;
+        --primary-strong: #ee7d38;
+        --secondary: #77d5d1;
+        --shadow: 0 24px 60px rgba(2, 7, 12, 0.3);
+        --radius: 24px;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: radial-gradient(circle at top left, rgba(119, 213, 209, 0.12), transparent 35%), linear-gradient(180deg, #07131d 0%, #0b1a25 100%);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      a { color: inherit; text-decoration: none; }
+      img { max-width: 100%; display: block; }
+      button, input, textarea { font: inherit; }
+      .container { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; }
+      .section { padding: 6rem 0; }
+      .section-alt { background: rgba(12, 26, 34, 0.8); }
+      .eyebrow {
+        color: var(--secondary);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin: 0 0 1rem;
+      }
+      h1,h2,h3,p { margin-top: 0; }
+      h1 {
+        font-size: clamp(2.8rem, 5vw, 5rem);
+        line-height: 1.06;
+        letter-spacing: -0.05em;
+        max-width: 640px;
+        margin-bottom: 1.2rem;
+      }
+      h2 {
+        font-size: clamp(2.1rem, 4vw, 3.25rem);
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        margin-bottom: 0.8rem;
+      }
+      h3 {
+        font-size: 1.4rem;
+        letter-spacing: -0.03em;
+        margin-bottom: 0.8rem;
+      }
+      .lead, .about-copy p, .service-card p, .project-content p, .process-step p, blockquote, .contact-form span { color: var(--muted); }
+      .site-header {
+        position: sticky; top: 0; z-index: 20; backdrop-filter: blur(14px); background: rgba(8, 19, 28, 0.68); border-bottom: 1px solid var(--line);
+      }
+      .nav-wrap { display: flex; align-items: center; justify-content: space-between; min-height: 78px; }
+      .brand { display: inline-flex; align-items: center; gap: 0.8rem; }
+      .brand-mark {
+        width: 2.5rem; height: 2.5rem; border-radius: 0.8rem; display: grid; place-items: center; font-weight: 900; color: #08131c; background: linear-gradient(135deg, var(--primary), var(--secondary)); box-shadow: var(--shadow);
+      }
+      .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
+      .brand-text strong { font-size: 1rem; }
+      .brand-text small { color: var(--muted); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; }
+      .main-nav { display: flex; align-items: center; gap: 2rem; }
+      .main-nav a { color: var(--muted); transition: color 0.2s ease; }
+      .main-nav a:hover, .main-nav a:focus-visible { color: var(--text); }
+      .nav-cta { background: rgba(244, 162, 89, 0.12); border: 1px solid rgba(244, 162, 89, 0.28); color: var(--text) !important; padding: 0.8rem 1.2rem; border-radius: 999px; }
+      .nav-toggle { display: none; background: transparent; border: 1px solid var(--line); border-radius: 0.8rem; width: 3rem; height: 3rem; padding: 0.75rem 0.8rem; cursor: pointer; }
+      .nav-toggle span { display: block; height: 2px; width: 100%; background: var(--text); margin: 0.3rem 0; }
+      .hero { padding: 5.5rem 0 4rem; }
+      .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 3rem; }
+      .hero-copy { max-width: 640px; }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.8rem 0 2rem; }
+      .button {
+        display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; padding: 1rem 1.5rem; font-weight: 700; transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease; cursor: pointer;
+      }
+      .button:hover, .button:focus-visible { transform: translateY(-1px); }
+      .button-primary { background: linear-gradient(135deg, var(--primary), var(--primary-strong)); color: #111; box-shadow: 0 20px 40px rgba(238, 125, 56, 0.24); }
+      .button-secondary { border: 1px solid var(--line); background: transparent; color: var(--text); }
+      .hero-trust { list-style: none; display: flex; flex-wrap: wrap; gap: 2rem; padding: 0; margin: 0; }
+      .hero-trust li { display: flex; flex-direction: column; gap: 0.25rem; }
+      .hero-trust strong { font-size: 1.75rem; letter-spacing: -0.05em; }
+      .hero-trust span { color: var(--muted); font-size: 0.85rem; }
+      .hero-visual { position: relative; min-height: 550px; display: grid; place-items: center; }
+      .visual-card { background: rgba(17, 31, 42, 0.9); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+      .card-main { position: relative; width: min(100%, 520px); padding: 2rem; min-height: 430px; }
+      .mini-panel { display: inline-flex; flex-direction: column; gap: 0.3rem; padding: 0.9rem 1rem; background: rgba(119, 213, 209, 0.08); border: 1px solid rgba(119, 213, 209, 0.22); border-radius: 1rem; }
+      .mini-panel span { color: var(--muted); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
+      .mini-panel strong { font-size: 2rem; line-height: 1; }
+      .machine-illustration { position: relative; width: 100%; height: 280px; margin-top: 1.6rem; }
+      .machine-base { position: absolute; left: 50%; bottom: 25px; transform: translateX(-50%); width: 340px; height: 110px; border-radius: 18px; background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(130, 164, 179, 0.1)); border: 1px solid var(--line); }
+      .machine-shaft { position: absolute; left: 50%; bottom: 96px; transform: translateX(-50%); width: 12px; height: 160px; background: linear-gradient(180deg, #d6e6ef, #7f96a4); border-radius: 999px; }
+      .machine-rod { position: absolute; left: 50%; bottom: 160px; width: 220px; height: 12px; transform: translateX(-50%); border-radius: 999px; background: linear-gradient(90deg, #d6e6ef, #95b8c8); }
+      .machine-gear { position: absolute; width: 90px; height: 90px; border-radius: 50%; border: 12px solid rgba(119, 213, 209, 0.8); box-shadow: inset 0 0 0 6px rgba(8, 19, 28, 0.5); }
+      .gear-one { left: 120px; bottom: 120px; }
+      .gear-two { right: 120px; bottom: 120px; }
+      .card-floating { position: absolute; right: 0; bottom: 20px; display: flex; flex-direction: column; gap: 0.3rem; padding: 1rem 1.3rem; }
+      .card-floating span { color: var(--muted); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; }
+      .card-floating strong { font-size: 2rem; line-height: 1; }
+      .logo-strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: rgba(9, 18, 26, 0.55); }
+      .logo-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1rem; align-items: center; justify-items: center; padding: 1.25rem 0; color: rgba(237, 244, 249, 0.7); font-weight: 600; }
+      .section-header { margin-bottom: 2.5rem; }
+      .split-header { display: flex; align-items: end; justify-content: space-between; gap: 1rem; }
+      .text-link { color: var(--secondary); font-weight: 600; }
+      .services-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; }
+      .service-card, .process-step, .project-card, blockquote { border: 1px solid var(--line); background: rgba(17, 31, 42, 0.86); border-radius: 1.25rem; box-shadow: var(--shadow); }
+      .service-card { padding: 2rem 1.5rem; }
+      .icon { width: 3rem; height: 3rem; display: grid; place-items: center; border-radius: 0.8rem; background: rgba(244, 162, 89, 0.12); color: var(--primary); font-weight: 700; margin-bottom: 1.25rem; }
+      .project-grid { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 1.5rem; }
+      .project-card { overflow: hidden; }
+      .project-card-large { grid-row: span 2; }
+      .project-image {
+        height: 240px; background-size: cover; background-position: center; position: relative; overflow: hidden;
+      }
+      .project-image::before {
+        content: ""; position: absolute; inset: 0; background:
+          linear-gradient(135deg, rgba(10,20,28,0.35), rgba(10,20,28,0.6)),
+          linear-gradient(120deg, rgba(119,213,209,0.50), rgba(244,162,89,0.20));
+      }
+      .img-1 { height: 320px; }
+      .img-2 {
+        background: linear-gradient(135deg, rgba(10,20,28,0.35), rgba(10,20,28,0.6)), linear-gradient(120deg, rgba(119,213,209,0.45), rgba(244,162,89,0.18));
+      }
+      .img-3 {
+        background: linear-gradient(135deg, rgba(10,20,28,0.35), rgba(10,20,28,0.6)), linear-gradient(120deg, rgba(119,213,209,0.30), rgba(77,111,160,0.30));
+      }
+      .project-content { padding: 1.5rem; }
+      .project-tag { display: inline-block; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--secondary); margin-bottom: 0.8rem; }
+      .process-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; }
+      .process-step { padding: 1.75rem 1.4rem; }
+      .process-step span { display: inline-flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 50%; background: rgba(119, 213, 209, 0.12); color: var(--secondary); font-weight: 700; margin-bottom: 1.2rem; }
+      .about-grid { display: grid; grid-template-columns: 1fr 1.05fr; gap: 2rem; align-items: center; }
+      .about-image {
+        min-height: 430px; border-radius: 1.6rem; border: 1px solid var(--line); background: linear-gradient(rgba(10, 18, 24, 0.2), rgba(10, 18, 24, 0.45)),
+          radial-gradient(circle at top left, rgba(119, 213, 209, 0.30), transparent 35%),
+          linear-gradient(135deg, rgba(65,87,98,0.65), rgba(15,31,45,0.9)); box-shadow: var(--shadow);
+      }
+      .check-list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 0.8rem; }
+      .check-list li { position: relative; padding-left: 2rem; color: var(--text); }
+      .check-list li::before { content: "✓"; position: absolute; left: 0; top: 0; color: var(--secondary); font-weight: 700; }
+      .testimonial-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+      blockquote { margin: 0; padding: 2rem; font-size: 1.05rem; }
+      blockquote footer { margin-top: 1.2rem; display: flex; flex-direction: column; gap: 0.1rem; }
+      blockquote footer strong { font-size: 1rem; }
+      blockquote footer span { color: var(--muted); font-size: 0.8rem; }
+      .cta-wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 1.75rem; align-items: center; }
+      .cta-section { padding-top: 6rem; padding-bottom: 7rem; }
+      .contact-form { background: rgba(17, 31, 42, 0.86); border: 1px solid var(--line); border-radius: 1.5rem; padding: 1.5rem; box-shadow: var(--shadow); }
+      .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+      .contact-form label { display: grid; gap: 0.5rem; margin-bottom: 1rem; color: var(--text); }
+      .contact-form input, .contact-form textarea { width: 100%; border: 1px solid var(--line); border-radius: 0.9rem; background: rgba(7, 17, 24, 0.58); color: var(--text); padding: 0.95rem 1rem; }
+      .contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(162, 183, 197, 0.8); }
+      .contact-form textarea { resize: vertical; min-height: 124px; }
+      .site-footer { border-top: 1px solid var(--line); background: rgba(7, 17, 24, 0.9); }
+      .footer-wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 90px; }
+      .footer-links { display: flex; flex-wrap: wrap; gap: 1.2rem; color: var(--muted); }
+      .footer-wrap p { margin: 0; color: var(--muted); }
+      @media (max-width: 980px) {
+        .hero-grid, .about-grid, .cta-wrap, .project-grid, .services-grid, .process-grid, .testimonial-grid, .logo-row { grid-template-columns: 1fr 1fr; }
+        .hero-grid, .cta-wrap, .about-grid { grid-template-columns: 1fr; }
+        .nav-toggle { display: block; }
+        .main-nav { position: absolute; top: calc(100% + 0.5rem); right: 1rem; left: 1rem; display: none; flex-direction: column; align-items: flex-start; padding: 1rem; background: rgba(8, 19, 28, 0.96); border: 1px solid var(--line); border-radius: 1rem; box-shadow: var(--shadow); }
+        .main-nav.is-open { display: flex; }
+        .project-grid { grid-template-columns: 1fr; }
+        .project-card-large { grid-row: auto; }
+      }
+      @media (max-width: 640px) {
+        .section { padding: 4.5rem 0; }
+        .services-grid, .process-grid, .testimonial-grid, .form-row, .logo-row { grid-template-columns: 1fr; }
+        .split-header, .footer-wrap { flex-direction: column; align-items: flex-start; }
+        .main-nav { left: 0.75rem; right: 0.75rem; }
+        .hero { padding-top: 4rem; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand" aria-label="ForgeWorks Engineering home">
+          <span class="brand-mark">F</span>
+          <span class="brand-text"><strong>ForgeWorks</strong><small>Engineering</small></span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#process">Process</a>
+          <a href="#about">About</a>
+          <a href="#contact" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Precision engineered for performance</p>
+            <h1>Mechanical systems built to move industry forward.</h1>
+            <p class="lead">We design, analyze, and optimize robust equipment and components for manufacturers, infrastructure teams, and industrial innovators.</p>
+            <div class="hero-actions">
+              <a href="#contact" class="button button-primary">Book a consultation</a>
+              <a href="#projects" class="button button-secondary">See our work</a>
+            </div>
+            <ul class="hero-trust" aria-label="Key metrics">
+              <li><strong>18+</strong><span>Years engineering</span></li>
+              <li><strong>240</strong><span>Projects delivered</span></li>
+              <li><strong>98%</strong><span>Client satisfaction</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual" aria-label="Engineering illustration">
+            <div class="visual-card card-main">
+              <div class="mini-panel"><span>Load analysis</span><strong>94.2%</strong></div>
+              <div class="machine-illustration" aria-hidden="true">
+                <div class="machine-base"></div>
+                <div class="machine-shaft"></div>
+                <div class="machine-gear gear-one"></div>
+                <div class="machine-gear gear-two"></div>
+                <div class="machine-rod"></div>
+              </div>
+            </div>
+            <div class="visual-card card-floating"><span>Prototype cycle</span><strong>12 weeks</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logo-strip" aria-label="Trusted by industry partners">
+        <div class="container logo-row">
+          <span>Atlas Manufacturing</span>
+          <span>Northline Energy</span>
+          <span>Quantum Materials</span>
+          <span>Harbor Systems</span>
+          <span>Vantage Industrial</span>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">What we do</p>
+            <h2>Engineering solutions for real-world performance.</h2>
+          </div>
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="icon">01</div>
+              <h3>Mechanical Design</h3>
+              <p>CAD-driven concept development, detailed design, tolerance stack-up, and design-for-manufacture strategies that accelerate execution.</p>
+            </article>
+            <article class="service-card">
+              <div class="icon">02</div>
+              <h3>CAE &amp; Analysis</h3>
+              <p>Finite element analysis, motion studies, thermal evaluation, and structural verification to reduce risk before production.</p>
+            </article>
+            <article class="service-card">
+              <div class="icon">03</div>
+              <h3>Prototyping</h3>
+              <p>Rapid prototyping support, build validation, test planning, and design iterations that help teams reach production-ready confidence.</p>
+            </article>
+            <article class="service-card">
+              <div class="icon">04</div>
+              <h3>Manufacturing Support</h3>
+              <p>Tooling documentation, assembly guidance, supplier interface support, and continuous improvement for reliable scaling.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section section-alt">
+        <div class="container">
+          <div class="section-header split-header">
+            <div>
+              <p class="eyebrow">Featured projects</p>
+              <h2>Solutions built for high-demand environments.</h2>
+            </div>
+            <a href="#contact" class="text-link">Discuss your challenge</a>
+          </div>
+          <div class="project-grid">
+            <article class="project-card project-card-large">
+              <div class="project-image img-1"></div>
+              <div class="project-content">
+                <span class="project-tag">Heavy Equipment</span>
+                <h3>Hydraulic Press Frame Optimization</h3>
+                <p>Reworked structural geometry to improve stiffness, reduce fatigue risk, and extend uptime on a high-cycle production press.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image img-2"></div>
+              <div class="project-content">
+                <span class="project-tag">Automation</span>
+                <h3>Robotic End-of-Arm Tooling</h3>
+                <p>Designed compact, lightweight tooling for high-precision repetitive assembly.</p>
+              </div>
+            </article>
+            <article class="project-card">
+              <div class="project-image img-3"></div>
+              <div class="project-content">
+                <span class="project-tag">Energy</span>
+                <h3>Thermal Flow Redesign</h3>
+                <p>Balanced heat paths and enclosure flow to improve system performance and reliability.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Our process</p>
+            <h2>From challenge to production, with clarity at every step.</h2>
+          </div>
+          <div class="process-grid">
+            <div class="process-step"><span>01</span><h3>Discover</h3><p>Define requirements, constraints, and performance targets for the operating environment.</p></div>
+            <div class="process-step"><span>02</span><h3>Engineer</h3><p>Develop concept and detailed designs supported by simulation and design reviews.</p></div>
+            <div class="process-step"><span>03</span><h3>Prototype</h3><p>Validate key functions with rapid iterations, testing, and measurable risk reduction.</p></div>
+            <div class="process-step"><span>04</span><h3>Deliver</h3><p>Provide production-ready documentation, support, and guidance for implementation.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section section-alt">
+        <div class="container about-grid">
+          <div class="about-image" aria-label="Engineering team image"></div>
+          <div class="about-copy">
+            <p class="eyebrow">Why ForgeWorks</p>
+            <h2>Driven by rigor, practicality, and measurable results.</h2>
+            <p>Our team blends analytical depth with field-tested understanding of machine operation, manufacturing realities, and long-term serviceability. We design for performance without losing sight of cost, quality, and speed.</p>
+            <ul class="check-list">
+              <li>Cross-functional design and analysis expertise</li>
+              <li>Practical manufacturing and assembly insight</li>
+              <li>Transparent communication from concept to handoff</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Client experience</p>
+            <h2>Trusted by teams that cannot afford downtime.</h2>
+          </div>
+          <div class="testimonial-grid">
+            <blockquote>
+              “ForgeWorks translated a complex production issue into a resilient mechanical solution. Their work gave our team confidence before the first build.”
+              <footer><strong>Maria Chen</strong><span>Operations Director, Atlas Manufacturing</span></footer>
+            </blockquote>
+            <blockquote>
+              “They balanced performance and practicality, helping us reduce weight without sacrificing safety or throughput.”
+              <footer><strong>Leon Patel</strong><span>Engineering Manager, Northline Energy</span></footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section cta-section">
+        <div class="container cta-wrap">
+          <div>
+            <p class="eyebrow">Let’s build your next solution</p>
+            <h2>Need a mechanical engineering partner for your next project?</h2>
+          </div>
+
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/segbeemmanuel389@gmail.com" method="POST">
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="New inquiry from ForgeWorks website" />
+            <div class="form-row">
+              <label><span>Name</span><input type="text" name="name" placeholder="Your name" required /></label>
+              <label><span>Email</span><input type="email" name="email" placeholder="you@company.com" required /></label>
+            </div>
+            <label><span>Project details</span><textarea name="message" rows="5" placeholder="Tell us about the challenge, objective, or timeline." required></textarea></label>
+            <button type="submit" class="button button-primary">Send inquiry</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <div>
+          <a href="#top" class="brand footer-brand"><span class="brand-mark">F</span><span class="brand-text"><strong>ForgeWorks</strong><small>Engineering</small></span></a>
+        </div>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <p>© <span id="year"></span> ForgeWorks Engineering</p>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const mainNav = document.querySelector('.main-nav');
+      const year = document.querySelector('#year');
+      const contactForm = document.querySelector('#contactForm');
+
+      if (year) year.textContent = new Date().getFullYear();
+
+      if (navToggle && mainNav) {
+        navToggle.addEventListener('click', () => {
+          const isOpen = mainNav.classList.toggle('is-open');
+          navToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+        mainNav.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            mainNav.classList.remove('is-open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', () => {
+          const button = contactForm.querySelector('button[type="submit"]');
+          if (button) {
+            const originalText = button.textContent;
+            button.textContent = 'Sending...';
+            button.disabled = true;
+            setTimeout(() => {
+              button.textContent = originalText;
+              button.disabled = false;
+            }, 2200);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
